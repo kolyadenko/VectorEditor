@@ -15,6 +15,12 @@ class Session {
     // Can be extended to URI
     init(withDocumentName documentName: String = "Default Vector Document") {
         self.documentName = documentName
+        loadDocument()
+        if currentDocument == nil {
+            let name = "New Document"
+            currentDocument = VectorDocument(name: name)
+            self.documentName = name
+        }
     }
     
     func loadDocument() {
@@ -27,9 +33,15 @@ class Session {
 }
 
 // MARK: Document
-class VectorDocument {
-    var items: [Drawable] = []
+class VectorDocument: NSObject {
+    var items: [Drawable] = [] {
+        didSet {
+            itemsUpdatedBlock?()
+        }
+    }
     var metadata: Metadata
+    
+    var itemsUpdatedBlock: (() -> Void)?
     
     init(name: String) {
         self.metadata = Metadata(name: name)
