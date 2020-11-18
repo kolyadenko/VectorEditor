@@ -12,7 +12,7 @@
         <scene sceneID="IEx-Kg-DZX">
             <objects>
                 <viewController id="8dT-Yj-ARD" customClass="CanvasViewController" customModule="VectorEditor" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tPG-uQ-bc7">
+                    <view key="view" contentMode="scaleToFill" id="tPG-uQ-bc7" customClass="CanvasView" customModule="VectorEditor" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="h56-n5-Vsb"/>

@@ -5,7 +5,7 @@
 //  Created by Alexey Kolyadenko on 18.11.2020.
 //
 
-import Foundation
+import UIKit
 
 // MARK: Session
 class Session {
@@ -51,6 +51,7 @@ class VectorDocument: NSObject {
 // MARK: Drawable protocol related
 protocol Drawable {
     var metadata: Metadata { get set }
+    var rect: CGRect? { get set }
 }
 
 struct Metadata {
@@ -59,17 +60,19 @@ struct Metadata {
 }
 
 // MARK: Drawable implementation
-struct Reet: Drawable {
+struct Rect: Drawable {
     var metadata: Metadata
+    var rect: CGRect?
     
     init() {
-        self.metadata = Metadata(name: "Reet")
+        self.metadata = Metadata(name: "Rect")
     }
 }
 
 struct Circle: Drawable {
     var metadata: Metadata
-    
+    var rect: CGRect?
+
     init() {
         self.metadata = Metadata(name: "Circle")
     }
