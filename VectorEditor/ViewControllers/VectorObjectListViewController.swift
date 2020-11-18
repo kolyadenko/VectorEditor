@@ -18,6 +18,7 @@ class VectorObjectListViewController: UIViewController {
     // MARK: Private props
     var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.dateFormat = "h:m:s dd/MM/YYYY"
         return formatter
     }()
     
