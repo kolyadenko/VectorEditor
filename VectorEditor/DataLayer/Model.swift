@@ -52,6 +52,7 @@ class VectorDocument: NSObject {
 protocol Drawable {
     var metadata: Metadata { get set }
     var rect: CGRect? { get set }
+    func draw()
 }
 
 struct Metadata {
@@ -67,6 +68,12 @@ struct Rect: Drawable {
     init() {
         self.metadata = Metadata(name: "Rect")
     }
+    
+    func draw() {
+        guard let rect = self.rect else { return }
+        let path = UIBezierPath(rect: rect)
+        path.stroke()
+    }
 }
 
 struct Circle: Drawable {
@@ -75,6 +82,12 @@ struct Circle: Drawable {
 
     init() {
         self.metadata = Metadata(name: "Circle")
+    }
+    
+    func draw() {
+        guard let rect = self.rect else { return }
+        let path = UIBezierPath(ovalIn: rect)
+        path.stroke()
     }
 }
 

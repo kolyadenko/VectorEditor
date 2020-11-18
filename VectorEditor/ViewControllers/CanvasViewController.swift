@@ -34,7 +34,15 @@ class CanvasViewController: UIViewController {
                 delegate?.addDrawable(drawable: circle)
                 self.mode = .viewing
             } else if var rect = drawable as? Rect {
-                
+                if let _ = rect.rect {
+                    let origin = rect.rect?.origin ?? .zero
+                    rect.rect = CGRect(origin: rect.rect?.origin ?? .zero, size: CGSize(width: location.x - origin.x, height: location.y - origin.y))
+                    delegate?.addDrawable(drawable: rect)
+                    self.mode = .viewing
+                } else {
+                    rect.rect = CGRect(origin: location, size: .zero)
+                    self.mode = .placing(rect)
+                }
             }
         default:
             break
@@ -53,9 +61,7 @@ class CanvasViewController: UIViewController {
         (view as? CanvasView)?.drawInRectBlock = { [weak self] rect in
             guard let items = self?.delegate?.items else { return }
             for item in items {
-                guard let rect = item.rect else { return }
-                let path = UIBezierPath(ovalIn: rect)
-                path.stroke()
+                item.draw()
             }
         }
         view.setNeedsDisplay()
