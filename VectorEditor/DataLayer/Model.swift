@@ -55,13 +55,13 @@ protocol Drawable {
     func draw()
 }
 
-struct Metadata {
+struct Metadata: Codable {
     var name: String
     var updatedAt: Date = Date()
 }
 
 // MARK: Drawable implementation
-struct Rect: Drawable {
+struct Rectangular: Drawable {
     var metadata: Metadata
     var rect: CGRect?
     
