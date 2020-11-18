@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		599BCEB62565221A0091A5E8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCEB52565221A0091A5E8 /* Model.swift */; };
+		599BCEBD2565235D0091A5E8 /* SessionSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCEBC2565235D0091A5E8 /* SessionSplitViewController.swift */; };
+		599BCEC02565270E0091A5E8 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCEBF2565270E0091A5E8 /* CanvasViewController.swift */; };
 		59C8B2C225651D1200DC8D3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B2C125651D1200DC8D3C /* AppDelegate.swift */; };
 		59C8B2C425651D1200DC8D3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B2C325651D1200DC8D3C /* SceneDelegate.swift */; };
 		59C8B2C625651D1200DC8D3C /* VectorObjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B2C525651D1200DC8D3C /* VectorObjectListViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		599BCEB52565221A0091A5E8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		599BCEBC2565235D0091A5E8 /* SessionSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSplitViewController.swift; sourceTree = "<group>"; };
+		599BCEBF2565270E0091A5E8 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		59C8B2BE25651D1200DC8D3C /* VectorEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VectorEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C8B2C125651D1200DC8D3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59C8B2C325651D1200DC8D3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				59C8B2C525651D1200DC8D3C /* VectorObjectListViewController.swift */,
+				599BCEBC2565235D0091A5E8 /* SessionSplitViewController.swift */,
+				599BCEBF2565270E0091A5E8 /* CanvasViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -157,8 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59C8B2C625651D1200DC8D3C /* VectorObjectListViewController.swift in Sources */,
+				599BCEBD2565235D0091A5E8 /* SessionSplitViewController.swift in Sources */,
 				59C8B2C225651D1200DC8D3C /* AppDelegate.swift in Sources */,
 				59C8B2C425651D1200DC8D3C /* SceneDelegate.swift in Sources */,
+				599BCEC02565270E0091A5E8 /* CanvasViewController.swift in Sources */,
 				599BCEB62565221A0091A5E8 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

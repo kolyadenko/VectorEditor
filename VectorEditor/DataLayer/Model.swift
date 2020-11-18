@@ -7,9 +7,33 @@
 
 import Foundation
 
+// MARK: Session
+class Session {
+    var currentDocument: VectorDocument?
+    private(set) var documentName: String
+    
+    // Can be extended to URI
+    init(withDocumentName documentName: String = "Default Vector Document") {
+        self.documentName = documentName
+    }
+    
+    func loadDocument() {
+        // TODO: Implement loading from filesystem
+    }
+    
+    func saveDocument() {
+        // TODO: Implement saving to filesystem
+    }
+}
+
 // MARK: Document
 class VectorDocument {
     var items: [Drawable] = []
+    var metadata: Metadata
+    
+    init(name: String) {
+        self.metadata = Metadata(name: name)
+    }
 }
 
 // MARK: Drawable protocol related
@@ -19,7 +43,7 @@ protocol Drawable {
 
 struct Metadata {
     var name: String
-    var dateUpdated: Date = Date()
+    var updatedAt: Date = Date()
 }
 
 // MARK: Drawable implementation
@@ -38,7 +62,6 @@ struct Circle: Drawable {
         self.metadata = Metadata(name: "Circle")
     }
 }
-
 
 
 
